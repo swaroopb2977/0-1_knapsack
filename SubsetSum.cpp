@@ -1,3 +1,6 @@
+// check  whether subset of given sum is there or not 
+
+
 #include<bits/stdc++.h>
 using namespace std;
 

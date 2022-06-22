@@ -1,0 +1,8 @@
+0-1 Knapsack (variations of problem)
+1.subset sum
+2.equal sum partition
+3.count of subset sum
+4.minimum subset sum diff 
+5.target sum
+6.#subset of given d/s 
+

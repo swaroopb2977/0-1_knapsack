@@ -43,8 +43,8 @@ int subsetNumber(int a[],int n,int sum)
 
 int main()
 {
-    int a[]={1,2,3,4,5,6};
-    int n=6;
-    int sum=6;
+    int a[]={3,5,6,7};
+    int n=4;
+    int sum=9;
     cout<<"The Number of subsets with sum "<<sum<<" is :-"<<subsetNumber(a,n,sum);
 }

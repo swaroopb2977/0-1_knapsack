@@ -23,7 +23,7 @@ bool ispresent(int a[],int sum,int n)
     {
         for(int j=1;j<=sum;j++)
         {
-            if(a[n-1] > j)
+            if(a[i-1] > j)
             {
                 dp[i][j]=dp[i-1][j];
             }

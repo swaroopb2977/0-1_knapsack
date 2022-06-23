@@ -45,6 +45,6 @@ int main()
 {
     int a[]={1,2,3,4,5,6};
     int n=6;
-    int sum=2;
+    int sum=6;
     cout<<"The Number of subsets with sum "<<sum<<" is :-"<<subsetNumber(a,n,sum);
 }

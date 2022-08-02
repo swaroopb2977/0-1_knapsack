@@ -5,45 +5,39 @@ using namespace std;
 
 
 
-int subsetNumber(int a[],int n,int sum)
+int subsetSum(int a[], int n, int sum)
 {
-
-    for(int j=1;j<=sum;j++)
+   
+    int tab[n + 1][sum + 1];
+ 
+    tab[0][0] = 1;
+    for (int i = 1; i <= sum; i++)
+        tab[0][i] = 0;
+     
+   
+    for (int i = 1; i <= n; i++)
     {
-        dp[0][j]=0;
-    }
-
-    for(int i=0;i<=n;i++)
-    {
-        dp[i][0]=1;
-    }
-
-    for(int i=1;i<=n;i++)
-    {
-        for(int j=1;j<=sum;j++)
+        for (int j = 0; j <= sum; j++)
         {
-            if(a[i-1] <= j)
-            {
-               dp[i][j]=dp[i-1][j-a[i-1]]+dp[i-1][j];
-            }
-
+       
+            if (a[i - 1] > j)
+                tab[i][j] = tab[i - 1][j];
             else
             {
-                dp[i][j]=dp[i-1][j];
+                tab[i][j] = tab[i - 1][j] + tab[i - 1][j - a[i - 1]];
             }
         }
     }
-
-
-
-    return dp[n][sum];
+ 
+ 
+    return tab[n][sum];
 }
 
 
 int main()
 {
-    int a[]={3,5,6,7};
+    int a[]={1,2,3,3};
     int n=4;
-    int sum=9;
-    cout<<"The Number of subsets with sum "<<sum<<" is :-"<<subsetNumber(a,n,sum);
+    int sum=6;
+    cout<<"The Number of subsets with sum "<<sum<<" is :-"<<subsetSum(a,n,sum);
 }

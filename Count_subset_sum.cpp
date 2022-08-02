@@ -7,7 +7,6 @@ using namespace std;
 
 int subsetNumber(int a[],int n,int sum)
 {
-    int dp[n+1][sum+1];
 
     for(int j=1;j<=sum;j++)
     {
